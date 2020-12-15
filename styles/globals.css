@@ -1,0 +1,414 @@
+@import 'reset.css';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+:root {
+  --color-brown: #C8B389;
+  --color-gray: #C5C5C5;
+  --color-gray-dark: #969696;
+  --color-gray-light: #F2F2F2;
+  --color-blue: #3f51b5;
+}
+
+body {
+  background-color: #F6F5F3;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.editorClassName {
+  border: 2px solid rgba(0,0,0,.1);
+  border-radius: 5px;
+  padding: 0 25px;
+}
+
+.form__head {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.grid-span2 {
+  grid-column-start: span 2;
+}
+
+.mt-20 + .mt-20 {
+  margin-top: 20px;
+}
+
+.ml-20 + .ml-20 {
+  margin-left: 20px;
+}
+
+.image {
+  width: 300px;
+  height: 300px;
+}
+
+.image img {
+  object-fit: contain;
+  height: 100%;
+}
+
+/* .block {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #777777;
+} */
+
+.section {
+  margin-bottom: 9px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #777777;
+}
+
+.speaker {
+  display: flex;
+  align-items: center;
+}
+
+.speaker + .speaker {
+  margin-top: 12px;
+}
+
+.speaker button {
+  margin-right: 24px;
+  margin-left: 8px;
+}
+
+.speaker button:hover circle {
+  fill: var(--color-brown);
+  fill-opacity: 1;
+}
+
+.signin__wrapper {
+  background-color: #222222;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.signin {
+  max-width: 360px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.signin__form {
+  width: 100%;
+}
+
+.signin__text {
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--color-gray-dark);
+}
+
+.signin__options {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.signin__option {
+  flex: 1;
+  height: 36px;
+  background-color: var(--color-gray-light);
+}
+
+.signin__option + .signin__option {
+  margin-left: 10px;
+}
+
+.signin__forget {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn__sign {
+  width: 100%;
+  height: 44px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: 1.5px solid var(--color-blue);
+  background-color: white;
+  color: var(--color-blue);
+  transition: all .3s ease;
+}
+
+.btn__sign:hover {
+  background-color: var(--color-blue);
+  color: white;
+}
+
+.btn__new-event {
+  background-color: var(--color-blue);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  padding: 9px 28px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.btn__add-speaker {
+  width: 100px;
+  border: 1px solid #D0BF9D;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 7px 24px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #D0BF9D;
+  margin-top: 19px;
+}
+
+.btn__wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.btn__save {
+  background-color: var(--color-blue);
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mt-24 {
+  margin-top: 24px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.mt-12 {
+  margin-top: 12px;
+}
+
+
+.avatar {
+  height: 155px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar__logo {
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  background-color: #d0d0d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+}
+
+.avatar__name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #3F3F3F;
+  margin-top: 8px;
+}
+
+.logout {
+  font-size: 12px;
+  line-height: 14px;
+  color: #CACACA;
+  margin-top: 8px;
+}
+
+.container {
+  max-width: 1075px;
+  padding: 0 20px 40px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #FFFFFF;
+  box-shadow: -1px 4px 4px rgba(0, 0, 0, 0.05), 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+thead {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+tbody {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+th, td {
+  padding: 20px 32px;
+}
+
+thead {
+  border-bottom: 1px solid #E0E0E0;
+}
+
+tr + tr {
+  border-top: 1px solid #E0E0E0;
+}
+
+tr {
+  cursor: pointer;
+}
+
+tr:hover {
+  background: #F5F5F5;
+}
+
+th {
+  text-align: left;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+  display: inline-block;
+}
+
+.circle__actual {
+  background-color: #C8B389;
+}
+
+.circle__archive {
+  background-color: #C4C4C4;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.upload {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #D0BF9D;
+  padding: 7px 10px;
+  border: 1px solid #D0BF9D;
+  border-radius: 4px;
+}
+
+.upload.error {
+  color: #f44336;
+  border-color: #f44336;
+}
+
+.upload.error svg path {
+  fill: #f44336;
+}
+
+.upload + .error-text {
+  color: #f44336;
+  font-size: 0.75rem;
+  margin-top: 3px;
+  text-align: left;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+}
+
+.upload div {
+  display: flex;
+  align-items: center;
+}
+
+.upload svg {
+  margin-right: 4px;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+}
+
+.switch__text {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: right;
+  color: #969696;
+}
+
+.description {
+  margin-top: 40px;
+}
+
+
+
+.close__svg circle {
+  transition: all .3s ease;
+}
+
+.close__svg:hover circle {
+  fill: var(--color-blue);
+}
+
+.consult {
+  background-color: #FFFFFF;
+  width: 50%;
+  height: 210px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 32px;
+}
